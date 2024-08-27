@@ -1,0 +1,196 @@
+IDE - interactive development env -> Pycharm, spyder, jupyter,notepad++
+Interpreter -> Compilier
+PEP8 -> rule book
+Ctrl+Atl+L -> formatting the file
+Ctrl+/ -> comment the line
+Ctrl+D -> copies the line and pastes it in the next line
+
+Todo:
+    1. Identity Operators in List
+
+Github
+
+Day 1:
+-------------------------------------------------------------
+Variables -> name which holds a value
+
+Datatypes:
+type() -> function where it will give you the datatype
+Numeric
+    Integer -> +,-,0
+    Float -> decimal
+Text type
+    String -> enclosed inside "", the value inside "" can be anything
+Boolean type
+    True (1)
+    False (0)
+Sequence Types:
+    list -> [] -> editable
+    tuple -> () -> cannot be editable
+Mapping Type:
+    Dictionary -> key:value
+None:
+    Nothing
+
+Operators:
+    1. Arithmetic Operators -> +,-,*,/
+        // -> floor division
+        % -> modulus
+        ** -> exponentiation
+
+    Floor division
+
+    3/2 -> 1.5
+    3//2 -> 1
+
+    modulus -> reminder
+    13%5 -> 3
+    3%2 -> 1
+
+    2)3(1                          5)13(2              45)12(0
+      2                              10                    0
+      --                            ----                  ---
+      1    -> reminder                3                    12
+
+    2. Comparison Operator
+    = -> equal    -> assigning
+    == -> equals -> comparing
+    comparison operator the output is always boolean
+
+    >,<,==,>=,!=,<=
+
+    3. Logical Operator -> Boolean
+    AND   -> x and y
+    OR
+    NOT
+
+    4. Assignment Operators
+    = -> assigning
+
+
+Conditional Statements:
+
+1. Simple If
+    Syntax:
+
+    if condition:
+        statements
+        statements
+        statements
+
+2. if...else statements
+
+    if condition:
+        statements
+        statements
+        statements
+    else:
+        statements
+        statements
+        statements
+
+input function -> input()
+
+3. elif statement -> else if
+
+    if condition:
+        block of code
+    elif condition:
+        block of code
+    else:
+        block of code
+
+    1. for every if you can have only one else
+    2. you can have multiple elif's
+
+4. if else ladder
+
+Loops in Python:
+
+    1. For loop
+    2. While loop
+
+For Loop:
+    Syntax:
+
+        for item in list:
+            action  -> block of code
+
+    range(start,stop-1) -> range(1,100) -> [1,2,3,...99]
+
+    Break(stop) & Continue(Skip):
+
+While Loop:
+    A 'while' loop is used to repeatedly execute a block of code as long as a given condition is true.
+
+    Syntax:
+        while condition:
+            block of code
+
+List:
+    A list is a mutable, ordered collection of elements. Elements can be of different datatypes and
+    can be modified, added and removed.
+    List is enclosed in big brackets  [].
+
+Tuple:
+    A list is a immutable, ordered collection of elements. Elements can be of different datatypes and
+    cannot be modified, added and removed.
+
+Dictionary:
+    key - pair
+    key must be unique
+    {}
+
+
+pip install turtle
+
+Python Functions:
+    built-in function    -> print(),type(),int(),input()
+    user defined function -> user created
+
+    1. function definition
+    2. function call
+
+    def funcName():
+        block of code
+
+Uses:
+    1. Reuse the code
+    2. Code readability
+
+Parameterised function
+
+Class in Python:
+-------------------
+Class is a template for creating objects
+Object is the instance of the class
+
+Syntax:
+    class NAME:
+        -----
+        -----
+
+When ever you create a object for a class init is called automatically.
+
+Diff Function & method?
+    Function and method both are same
+    its called a method only when its inside a class
+
+OOPS:
+    1. Inheritance
+        1. Single
+        2. Multiple
+        3. Multilevel
+        4. Hierarchical
+        5. Hybrid
+    2. Polymorphism -> One instance behaving or having multiple functionality
+        1. Compile time(Static Polymorphism)
+            Method Overloading -> same name but different parameters
+        2. Run time (Dynamic Polymorphism)
+            Method Over ridding
+    3. Encapsulation
+    4. Abstraction
+
+Exception Handling:
+    Error handling
+    try .... except
