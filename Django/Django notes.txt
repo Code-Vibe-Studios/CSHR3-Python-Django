@@ -1,0 +1,299 @@
+Django
+    Web framework
+
+Framework
+    used by developers to build applications
+
+example:
+
+python -> Flask, Django
+Java -> Spring
+Php -> larvel
+C# -> dotnet
+
+preq:
+    - Python -> basics of python, Class, Oops
+    - HTML
+    - CSS
+    - CSS libraries -> bootstrap(optional)
+    - SQL (optional)
+
+Databases
+ - SQL(Tables) => Mysql, sqlite, postgres
+ - NoSql(JSON) => MongoDB
+
+
+{
+    "key":"value",
+}
+
+Resources:
+===============
+https://code.visualstudio.com/download
+
+https://www.youtube.com/watch?v=UB1O30fR-EE
+
+https://www.w3schools.com/html/
+
+https://www.w3schools.com/css/default.asp
+
+Arch 
+
+- MVC
+- MVT
+
+
+M - Model
+V - view
+T - template
+
+Why django popular?
+
+- Multi-language support
+- web dev light weight server
+- ORM
+
+
+Package:
+
+- venv/virtualenv
+- django
+
+commands:
+
+To create virtual environment:
+    python -m venv env
+    python -m virtualenv env
+
+to activate the virtual environment in windows
+    ./env/Scripts/activate
+
+To activate the virtual environment in MacOS
+    source ./env/bin/activate
+
+To deactivate the virtual environment in both
+    deactivate
+
+To install django:
+    pip install django
+
+To get requirements.txt file from your virtual environment,
+    pip freeze > requirements.txt
+
+If you have requirements.txt file. To install all the libraries from that file,
+    pip install -r .\requirements.txt
+
+===============================
+Get-ExecutionPolicy
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+===============================
+
+To create a django Project, 
+    django-admin startproject projectName
+
+To migrate the project with Database
+    python manage.py migrate
+
+To Run Django Project.
+    python manage.py runserver
+
+To stop the server, press "Ctrl + C"
+
+VS code Extension for sqlite is Sqlite Viewer
+
+To create new user,
+    python manage.py createsuperuser
+
+To create app in Django,
+    python manage.py startapp appdemo
+
+To apply migrations with app in project
+    python manage.py makemigrations
+    python manage.py migrate
+
+To create template folder,
+    In app level, create a templates folder.
+    Create HTML files
+
+To configure the templates,
+    go to settings, Templates = {
+      In  "DIRS" : ['templates'],
+    }
+
+In views
+    def about(request):
+        return render(request, 'about.html')
+
+Template tags
+
+{% tag %}
+
+Ex: {% for %} -> iteration
+    {% if %} -> condition
+    {% else %}
+    {% block %} 
+
+
+
+Template filters
+
+{{|}}
+
+Ex: {{Variable | filterName}} 
+    |date -> format
+    |length -> find the length
+    |default -> to set default value
+
+Find all templates and filters in below website:
+    https://www.djangotemplatetagsandfilters.com/
+    https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#
+
+Boolean operators
+
+>, <,  !,
+
+Template inheritance 
+
+Static files:
+    create a static folder in base folder of the prject
+
+    To configure the static,
+        import os
+        STATICFILES_DIRS =[
+            os.path.join(BASE_DIR, 'static')
+        ]
+
+
+Models:
+    Fields and their behaviors
+
+    one model -> single table in a db
+
+After creating every model, we have run migrations
+    python manage.py makemigrations
+    python manage.py migrate
+
+
+ORM -> object Relation model
+
+    - bridges gap b/w our models and db
+
+    operations in ORM
+        - Add/create
+        - delete
+        - update
+        - retrive
+        - query object(exclude, filter)
+
+
+QuerySet
+    Collection of db query results that you can manipulate and interact with various methods of ORM
+
+ORM Queries
+============
+
+
+class Person(models.Model):
+    name = models.CharField(max_length=50)
+    age = models.IntegerField()
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.name
+
+To add the model in admin site, go to admin site
+    from Person.models import Person
+    admin.site.register(Person)
+
+After add model, do migrations
+    python manage.py makemigrations
+    python manage.py migrate
+
+To run the django shell,
+    python manage.py shell
+
+-> Create or Add in the DB
+    P1 = Person(name='sampath',age=30,email='sampath@gmail.com)
+    P1.save()
+
+-> To retrive all data from the DB table
+    Person.objects.all()
+
+-> To update a particular record,
+    P1 = Person(name='sampath',age=30,email='sampath@gmail.com)
+    P1.age = 25
+    P1.save()
+
+-> To delete particular record,
+    P1 = Person(name='sampath',age=30,email='sampath@gmail.com)
+    P1.delete()
+
+-> To filter based on certain condition,
+    Person.objects.filter(age=30)
+
+-> To exclude some record base on condition,
+    Person.objects.exclude(age=30)
+
+CSS 
+
+-> Inline CSS
+-> External CSS
+-> Css Frameworks -> bootstrap, tailwind, material ui ....
+
+
+Weather API sign up
+https://home.openweathermap.org/users/sign_up
+
+
+6b59eab76101e1f5bbfe9ac7c53e2786
+
+https://api.openweathermap.org/data/2.5/weather?q=London&appid=6b59eab76101e1f5bbfe9ac7c53e2786
+
+
+- To call external api we use "urllib" package.
+
+"weather": [
+    {
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    },
+    {
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    },{
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    },{
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    }
+  ],
+
+
+weather = [
+    {
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    }, 
+    "ghj",
+    {
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    },
+    [1,2,34]
+]
+  
+
+  weather[4][2]
